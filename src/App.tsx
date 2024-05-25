@@ -34,7 +34,14 @@ function App() {
     <div>
       <h1 style={{ marginBottom: "50px" }}>Spin to win!</h1>
 
-      <div style={{ display: "flex", flexDirection: "row", gap: "100px" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "100px",
+          alignItems: "center",
+        }}
+      >
         <div>
           <h2>Options</h2>
           <div>
@@ -87,6 +94,7 @@ function App() {
             </div>
           </form>
         </div>
+        {/* {grouppedOptions.length >= 2 ? ( */}
         <WheelComponent
           key={options.length}
           segments={options}
@@ -102,6 +110,9 @@ function App() {
           downDuration={1000}
           fontFamily="Arial"
         />
+        {/* ) : (
+          <p>Add at least 2 options to spin the wheel</p>
+        )} */}
       </div>
     </div>
   );
